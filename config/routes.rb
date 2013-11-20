@@ -5,8 +5,9 @@ Dayanlist::Application.routes.draw do
 
   root :to => 'categories#index'
 
-  resources :categories
-
+  resources :categories do 
+    resources :posts
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

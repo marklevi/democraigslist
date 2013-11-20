@@ -1,3 +1,13 @@
 <h1><%= @category.name %></h1>
 
+<% if @category.posts.empty? %>
+  <h1>there are no posts</h1> 
+<% else %>
+  <% @category.posts.each do |post| %>
+    <%= post.title %>
+  <% end %>
+<% end %>
+
+<%= link_to "Create Posts", new_category_post_path(@category)%>
+
 <%= link_to "Back to Categories", categories_path %>

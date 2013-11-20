@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.all
+    @category = Category.all
   end
 
   def show
@@ -13,6 +13,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.create(params[:category])
-    redirect_to @category
+    redirect_to @category # categories#show
+    # category_path(@category)
   end
 end

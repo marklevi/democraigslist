@@ -1,9 +1,8 @@
 <h1>Pick a Category</h1>
 
-<% @categories.each do |category| %>
-  <%= link_to category.name, category %><br>
+
+<%= link_to "create category", new_category_path   %>
+<% @category.each do |category| %>
+<%= link_to category.name, category  %>
 <% end %>
 
-<br><br>
-
-<%= link_to "Create a new category", new_category_path %>
